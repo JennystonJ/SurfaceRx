@@ -1,0 +1,41 @@
+/*
+ * nrf24l01_reg.h
+ *
+ *  Created on: Dec 3, 2022
+ *      Author: Jennyston
+ */
+
+#ifndef INC_DEVICES_NRF24L01_REG_H_
+#define INC_DEVICES_NRF24L01_REG_H_
+
+    //Register Map
+typedef enum {
+	NRF_CONFIG = 0x00,
+	NRF_EN_AA = 0x01,
+	NRF_EN_RXADDR = 0x02,
+	NRF_SETUP_AW = 0x03,
+	NRF_SETUP_RETR = 0x04,
+	NRF_RF_CH = 0x05,
+	NRF_RF_SETUP = 0x06,
+	NRF_STATUS = 0x07,
+	NRF_OBSERVE_TX = 0x08,
+	NRF_RPD = 0x09,
+	NRF_RX_ADDR_P0 = 0x0A,
+	NRF_RX_ADDR_P1 = 0x0B,
+	NRF_RX_ADDR_P2 = 0x0C,
+	NRF_RX_ADDR_P3 = 0x0D,
+	NRF_RX_ADDR_P4 = 0x0E,
+	NRF_RX_ADDR_P5 = 0x0F,
+	NRF_TX_ADDR = 0x10,
+	NRF_RX_PW_P0 = 0x11,
+	NRF_RX_PW_P1 = 0x12,
+	NRF_RX_PW_P2 = 0x13,
+	NRF_RX_PW_P3 = 0x14,
+	NRF_RX_PW_P4 = 0x15,
+	NRF_RX_PW_P5 = 0x16,
+	NRF_FIFO_STATUS = 0x17,
+	NRF_DYNPD = 0x1C
+
+} NrfReg;
+
+#endif /* INC_DEVICES_NRF24L01_REG_H_ */
