@@ -1,21 +1,10 @@
 #include "devices/radio/modules/nrf24/nrf24l04.h"
+#include "devices/radio/modules/nrf24/nrf24l01_cmd.h"
 #include "utilities/delay.h"
 #include "assert.h"
 
-//SPI Commands
-//TODO: Convert to enumerated type
-#define R_Rx_Payload 0b01100001
-#define W_Tx_Payload 0b10100000
-#define Flush_Tx 0b11100001
-#define Flush_Rx 0b11100010
-#define Reuse_Tx_Pl 0b11100011
-#define R_Rx_Pl_Wid 0b01100000
-#define W_Ack_Payload 0b10101000
-#define W_Tx_Payload_Noack 0b10110000
-#define NOP 0b11111111
-
 static void SetNrfCE(Nrf_t *nrf, bool set);
-static void AssertNrfCS(Nrf_t *nrf, bool set);
+static void SelectNrfCS(Nrf_t *nrf, bool set);
 
 
 void InitNrf(Nrf_t *nrf, SPI_HandleTypeDef *hspi, GPIO_t *ncs,
@@ -98,7 +87,7 @@ bool IsNrfDataSent(Nrf_t *nrf) {
 void ReadNrfRegister(Nrf_t *nrf, NrfReg reg, uint8_t size,
         uint8_t *data) {
 
-    AssertNrfCS(nrf, true);
+    SelectNrfCS(nrf, true);
 
     //initiate read operation
     uint8_t status;
@@ -110,13 +99,13 @@ void ReadNrfRegister(Nrf_t *nrf, NrfReg reg, uint8_t size,
 //        *(data+i) = nrfSpi.ExchangeData8(0);
 //    }
 
-    AssertNrfCS(nrf, false);
+    SelectNrfCS(nrf, false);
 }
 
 void WriteNrfRegister(Nrf_t *nrf, NrfReg reg, uint8_t size,
         uint8_t *data) {
 
-	AssertNrfCS(nrf, true);
+	SelectNrfCS(nrf, true);
 
     //initiate write operation
 	uint8_t status;
@@ -128,37 +117,37 @@ void WriteNrfRegister(Nrf_t *nrf, NrfReg reg, uint8_t size,
 //    			HAL_MAX_DELAY);
 	HAL_SPI_Transmit(nrf->hspi, data, size, HAL_MAX_DELAY);
 
-	AssertNrfCS(nrf, false);
+	SelectNrfCS(nrf, false);
 }
 
 void ReadNrfRxPayload(Nrf_t *nrf, uint8_t *data, uint8_t size) {
 
 	ASSERT(size <= 32);
-	AssertNrfCS(nrf, true);
+	SelectNrfCS(nrf, true);
 
     //initiate RX payload read
-    uint8_t txData = R_Rx_Payload;
-    HAL_SPI_TransmitReceive(nrf->hspi, &txData, data, 1, HAL_MAX_DELAY);
+    NrfCmd command = NRF_CMD_R_RX_PAYLOAD;
+    HAL_SPI_TransmitReceive(nrf->hspi, &command, data, 1, HAL_MAX_DELAY);
     //read RX payload
     HAL_SPI_Receive(nrf->hspi, data, size, HAL_MAX_DELAY);
 
-	AssertNrfCS(nrf, false);
+	SelectNrfCS(nrf, false);
 }
 
 void WriteNrfTxPayload(Nrf_t *nrf, uint8_t *data, uint8_t size) {
 
 	ASSERT(size <= 32);
-	AssertNrfCS(nrf, true);
+	SelectNrfCS(nrf, true);
 
 
     //initiate TX payload write
 	uint8_t status;
-    uint8_t txData = W_Tx_Payload;
-    HAL_SPI_TransmitReceive(nrf->hspi, &txData, &status, 1, HAL_MAX_DELAY);
+    NrfCmd command = NRF_CMD_W_TX_PAYLOAD;
+    HAL_SPI_TransmitReceive(nrf->hspi, &command, &status, 1, HAL_MAX_DELAY);
     //write TX payload
     HAL_SPI_Transmit(nrf->hspi, data, size, HAL_MAX_DELAY);
 
-	AssertNrfCS(nrf, false);
+	SelectNrfCS(nrf, false);
 }
 
 void WriteNrfAckPayload(Nrf_t *nrf, uint8_t pipe, uint8_t *data,
@@ -167,90 +156,90 @@ void WriteNrfAckPayload(Nrf_t *nrf, uint8_t pipe, uint8_t *data,
 	ASSERT(pipe <= 5);
 	ASSERT(size <= MAX_PACKET_LENGTH);
 
-	AssertNrfCS(nrf, true);
+	SelectNrfCS(nrf, true);
 
 	//initiate ACK payload write
 	uint8_t status;
-	uint8_t command = W_Ack_Payload | pipe;
+	NrfCmd command = NRF_CMD_W_ACK_PAYLOAD | pipe;
 	HAL_SPI_TransmitReceive(nrf->hspi, &command, &status, 1, HAL_MAX_DELAY);
 	//write ACK payload
 	HAL_SPI_Transmit(nrf->hspi, data, size, HAL_MAX_DELAY);
 
-	AssertNrfCS(nrf, false);
+	SelectNrfCS(nrf, false);
 }
 
 void FlushNrfTx(Nrf_t *nrf) {
 
-	AssertNrfCS(nrf, true);
+	SelectNrfCS(nrf, true);
 
     //flush TX FIFO
 	uint8_t status;
-	uint8_t command = Flush_Tx;
+	NrfCmd command = NRF_CMD_FLUSH_TX;
 	HAL_SPI_TransmitReceive(nrf->hspi, &command, &status, 1, HAL_MAX_DELAY);
 
-	AssertNrfCS(nrf, false);
+	SelectNrfCS(nrf, false);
 }
 
 void FlushNrfRx(Nrf_t *nrf) {
 
-	AssertNrfCS(nrf, true);
+	SelectNrfCS(nrf, true);
 
     //flush RX FIFO
 	uint8_t status;
-	uint8_t command = Flush_Rx;
+	NrfCmd command = NRF_CMD_FLUSH_RX;
 	HAL_SPI_TransmitReceive(nrf->hspi, &command, &status, 1, HAL_MAX_DELAY);
 
-	AssertNrfCS(nrf, false);
+	SelectNrfCS(nrf, false);
 }
 
 void ReuseNrfTxPayload(Nrf_t *nrf) {
 
-	AssertNrfCS(nrf, true);
+	SelectNrfCS(nrf, true);
 
     //reuse last transmitted payload
     uint8_t status;
-    uint8_t txData = Reuse_Tx_Pl;
-    HAL_SPI_TransmitReceive(nrf->hspi, &txData, &status, 1, HAL_MAX_DELAY);
+    NrfCmd command = NRF_CMD_REUSE_TX_PL;
+    HAL_SPI_TransmitReceive(nrf->hspi, &command, &status, 1, HAL_MAX_DELAY);
 
-	AssertNrfCS(nrf, false);
+	SelectNrfCS(nrf, false);
 }
 
 uint8_t ReadNrfRxPayloadWidth(Nrf_t *nrf) {
 
-	AssertNrfCS(nrf, true);
+	SelectNrfCS(nrf, true);
 
     //read RX payload width for top payload
 	uint8_t status;
-	uint8_t command = R_Rx_Pl_Wid;
+	NrfCmd command = NRF_CMD_R_RX_PL_WID;
     HAL_SPI_TransmitReceive(nrf->hspi, &command, &status, 1, HAL_MAX_DELAY);
     uint8_t payloadWidth;
     HAL_SPI_Receive(nrf->hspi, &payloadWidth, 1, HAL_MAX_DELAY);
 
-	AssertNrfCS(nrf, false);
+	SelectNrfCS(nrf, false);
     return payloadWidth;
 }
 
 void WriteNrfTxPayloadNoAck(Nrf_t *nrf, uint8_t *data, uint8_t size) {
 
-	AssertNrfCS(nrf, true);
+	SelectNrfCS(nrf, true);
 
     uint8_t status;
-    uint8_t command = W_Tx_Payload_Noack;
+    NrfCmd command = NRF_CMD_W_TX_PAYLOAD_NOACK;
     HAL_SPI_TransmitReceive(nrf->hspi, &command, &status, 1, HAL_MAX_DELAY);
     HAL_SPI_Receive(nrf->hspi, data, size, HAL_MAX_DELAY);
 
-	AssertNrfCS(nrf, false);
+	SelectNrfCS(nrf, false);
 }
 
 uint8_t NopNrf(Nrf_t *nrf) {
 
-	AssertNrfCS(nrf, true);
+	SelectNrfCS(nrf, true);
 
     uint8_t status;
-    uint8_t command = NOP;
+    NrfCmd command = NRF_CMD_NOP;
     HAL_SPI_TransmitReceive(nrf->hspi, &command, &status, 1, HAL_MAX_DELAY);
 
-	AssertNrfCS(nrf, false);
+	SelectNrfCS(nrf, false);
 
 	return status;
 }
@@ -260,7 +249,7 @@ static void SetNrfCE(Nrf_t *nrf, bool set) {
 			set ? GPIO_PIN_SET : GPIO_PIN_RESET);
 }
 
-static void AssertNrfCS(Nrf_t *nrf, bool set) {
+static void SelectNrfCS(Nrf_t *nrf, bool set) {
 	HAL_GPIO_WritePin(nrf->ncsGpio->port, nrf->ncsGpio->pin,
 			set ? GPIO_PIN_RESET : GPIO_PIN_SET);
 }
