@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name "NRF24L01")(type "KiCad")(uri "${KIPRJMOD}/libraries/footprints/NRF24L01.pretty")(options "")(descr ""))
+  (lib (name "Custom_ML01SP4-Carrier")(type "KiCad")(uri "${KIPRJMOD}/libraries/footprints/Custom_ML01SP4-Carrier.pretty")(options "")(descr ""))
 )

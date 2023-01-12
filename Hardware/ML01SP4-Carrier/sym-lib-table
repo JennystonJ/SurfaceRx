@@ -1,3 +1,3 @@
 (sym_lib_table
-  (lib (name "NRF24L01")(type "KiCad")(uri "${KIPRJMOD}/libraries/symbols/NRF24L01.kicad_sym")(options "")(descr ""))
+  (lib (name "Custom_ML01SP4-Carrier")(type "KiCad")(uri "${KIPRJMOD}/libraries/symbols/Custom_ML01SP4-Carrier.kicad_sym")(options "")(descr ""))
 )
