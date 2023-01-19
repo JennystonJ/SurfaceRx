@@ -1,0 +1,302 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model NE555DR
+#/6648/2/2.37/8/4/Integrated Circuit
+DEF NE555DR IC 0 30 Y Y 1 F N
+F0 "IC" 1050 600 50 H V L CNN
+F1 "NE555DR" 1050 500 50 H V L CNN
+F2 "SOIC127P600X175-8N" 1050 400 50 H I L CNN
+F3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" 1050 300 50 H I L CNN
+F4 "Single Precision Timer" 1050 200 50 H I L CNN "Description"
+F5 "1.75" 1050 100 50 H I L CNN "Height"
+F6 "Texas Instruments" 1050 0 50 H I L CNN "Manufacturer_Name"
+F7 "NE555DR" 1050 -100 50 H I L CNN "Manufacturer_Part_Number"
+F8 "595-NE555DR" 1050 -200 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.com/Search/Refine.aspx?Keyword=595-NE555DR" 1050 -300 50 H I L CNN "Mouser Price/Stock"
+F10 "1218414" 1050 -400 50 H I L CNN "RS Part Number"
+F11 "http//uk.rs-online.com/web/p/products/1218414" 1050 -500 50 H I L CNN "RS Price/Stock"
+DRAW
+X GND 1 600 -1000 200 U 50 50 0 0 B
+X TRIG 2 0 -400 200 R 50 50 0 0 B
+X OUT 3 1200 -200 200 L 50 50 0 0 B
+X ~RESET 4 0 0 200 R 50 50 0 0 B
+X CONT 5 500 600 200 D 50 50 0 0 B
+X THRES 6 0 -300 200 R 50 50 0 0 B
+X DISCH 7 0 -100 200 R 50 50 0 0 B
+X VCC 8 700 600 200 D 50 50 0 0 B
+P 5 0 1 6 200 400 1000 400 1000 -800 200 -800 200 400 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model SP3003-02XTG
+#/893235/294066/2.49/5/3/TVS Diode (Uni-directional)
+DEF SP3003-02XTG D 0 30 Y Y 1 F N
+F0 "D" 950 300 50 H V L CNN
+F1 "SP3003-02XTG" 950 200 50 H V L CNN
+F2 "SOTFL50P160X60-5N" 950 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/2/SP3003-02XTG.pdf" 950 0 50 H I L CNN
+F4 "ESD Suppressors / TVS Diodes 2 channels .65pF" 950 -100 50 H I L CNN "Description"
+F5 "0.6" 950 -200 50 H I L CNN "Height"
+F6 "576-SP3003-02XTG" 950 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Littelfuse/SP3003-02XTG?qs=Xb8IjHhkxj5Cavojk8ommA%3D%3D" 950 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "LITTELFUSE" 950 -500 50 H I L CNN "Manufacturer_Name"
+F9 "SP3003-02XTG" 950 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X NC 1 0 0 200 R 50 50 0 0 N
+X GND 2 0 -100 200 R 50 50 0 0 P
+X VCC 3 0 -200 200 R 50 50 0 0 P
+X I/O_2 4 1100 0 200 L 50 50 0 0 P
+X I/O_1 5 1100 -100 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 900 100 900 -300 200 -300 200 100 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model TCKE805NA,RF
+#/11335668/294066/2.49/15/4/Integrated Circuit
+DEF TCKE805NA,RF IC 0 30 Y Y 1 F N
+F0 "IC" 1250 700 50 H V L CNN
+F1 "TCKE805NA,RF" 1250 600 50 H V L CNN
+F2 "TCKE805NA" 1250 500 50 H I L CNN
+F3 "http://toshiba.semicon-storage.com/info/docget.jsp?did=67979&prodName=TCKE805NA" 1250 400 50 H I L CNN
+F4 "18 V, 5A eFuse IC with Adjustable Overcurrent Protection and Reverse Current Blocking FET Control" 1250 300 50 H I L CNN "Description"
+F5 "0.75" 1250 200 50 H I L CNN "Height"
+F6 "757-TCKE805NA,RF" 1250 100 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Toshiba/TCKE805NARF?qs=OTrKUuiFdkZ%2FkUZt4VKCTw%3D%3D" 1250 0 50 H I L CNN "Mouser Price/Stock"
+F8 "Toshiba" 1250 -100 50 H I L CNN "Manufacturer_Name"
+F9 "TCKE805NA,RF" 1250 -200 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X DV/DT 1 0 0 200 R 50 50 0 0 P
+X EN/UVLO 2 0 -100 200 R 50 50 0 0 P
+X VIN_1 3 0 -200 200 R 50 50 0 0 P
+X VIN_2 4 0 -300 200 R 50 50 0 0 P
+X VIN_3 5 0 -400 200 R 50 50 0 0 P
+X VOUT_1 6 1400 -400 200 L 50 50 0 0 P
+X VOUT_2 7 1400 -300 200 L 50 50 0 0 P
+X VOUT_3 8 1400 -200 200 L 50 50 0 0 P
+X EFET 9 1400 -100 200 L 50 50 0 0 P
+X ILIM 10 1400 0 200 L 50 50 0 0 P
+X GND_1 11 600 700 200 D 50 50 0 0 P
+X GND_2 12 800 700 200 D 50 50 0 0 P
+X GND_3 13 700 700 200 D 50 50 0 0 P
+X GND_4 14 600 -1100 200 U 50 50 0 0 P
+X GND_5 15 700 -1100 200 U 50 50 0 0 P
+P 5 0 1 6 200 500 1200 500 1200 -900 200 -900 200 500 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model CUHS20S30,H3F
+#/2251521/294066/2.49/2/4/Schottky Diode
+DEF CUHS20S30,H3F D 0 30 Y Y 1 F N
+F0 "D" 500 350 50 H V L CNN
+F1 "CUHS20S30,H3F" 500 250 50 H V L CNN
+F2 "CUHS20S40H3F" 500 150 50 H I L CNN
+F3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=63606&prodName=CUHS20S30" 500 50 50 H I L CNN
+F4 "Schottky Diodes & Rectifiers Sml-Signal Schottky 2A 30V 390pF" 500 -50 50 H I L CNN "Description"
+F5 "" 500 -150 50 H I L CNN "Height"
+F6 "757-CUHS20S30H3F" 500 -250 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Toshiba/CUHS20S30H3F?qs=PqoDHHvF64%252BnIC9Qnnw9zg%3D%3D" 500 -350 50 H I L CNN "Mouser Price/Stock"
+F8 "Toshiba" 500 -450 50 H I L CNN "Manufacturer_Name"
+F9 "CUHS20S30,H3F" 500 -550 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X ~ 1 100 0 100 R 50 50 0 0 P
+X ~ 2 700 0 100 L 50 50 0 0 P
+P 2 0 1 6 300 100 300 -100 N
+P 3 0 1 6 300 100 340 100 340 60 N
+P 3 0 1 6 300 -100 260 -100 260 -60 N
+P 2 0 1 6 200 0 300 0 N
+P 2 0 1 6 500 0 600 0 N
+P 4 0 1 10 300 0 500 100 500 -100 300 0 F
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model NCP115ASN330T2G
+#/1658073/294066/2.49/5/3/Integrated Circuit
+DEF NCP115ASN330T2G IC 0 30 Y Y 1 F N
+F0 "IC" 850 300 50 H V L CNN
+F1 "NCP115ASN330T2G" 850 200 50 H V L CNN
+F2 "SOT95P275X110-5N" 850 100 50 H I L CNN
+F3 "http://www.onsemi.com/pub/Collateral/NCP115-D.PDF" 850 0 50 H I L CNN
+F4 "300 MA CMOS LOW DROPOUT R" 850 -100 50 H I L CNN "Description"
+F5 "1.1" 850 -200 50 H I L CNN "Height"
+F6 "863-NCP115ASN330T2G" 850 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/onsemi/NCP115ASN330T2G?qs=byeeYqUIh0PuUump9WHLUw%3D%3D" 850 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "onsemi" 850 -500 50 H I L CNN "Manufacturer_Name"
+F9 "NCP115ASN330T2G" 850 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X IN 1 0 0 200 R 50 50 0 0 P
+X GND 2 0 -100 200 R 50 50 0 0 P
+X EN 3 0 -200 200 R 50 50 0 0 P
+X N/C 4 1000 0 200 L 50 50 0 0 N
+X OUT 5 1000 -100 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 800 100 800 -300 200 -300 200 100 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model PTS636_SM25J_SMTR_LFS
+#/2171930/294066/2.49/2/4/Connector
+DEF PTS636_SM25J_SMTR_LFS J 0 30 Y Y 1 F N
+F0 "J" 750 300 50 H V L CNN
+F1 "PTS636_SM25J_SMTR_LFS" 750 200 50 H V L CNN
+F2 "PTS636SM25JSMTRLFS" 750 100 50 H I L CNN
+F3 "https://www.mouser.co.uk/datasheet/2/60/pts636-1550567.pdf" 750 0 50 H I L CNN
+F4 "Tactile Switches Tact 50mA 12VDC, 6.0x3.5, 2.5mm H, 180gf, J leads, No ground pin, White Actuator" 750 -100 50 H I L CNN "Description"
+F5 "2.7" 750 -200 50 H I L CNN "Height"
+F6 "611-PTS636SM25JSMTRL" 750 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/CK/PTS636-SM25J-SMTR-LFS?qs=vLWxofP3U2zGz0hgscFyyw%3D%3D" 750 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "C & K COMPONENTS" 750 -500 50 H I L CNN "Manufacturer_Name"
+F9 "PTS636 SM25J SMTR LFS" 750 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X COM 1 0 0 200 R 50 50 0 0 P
+X NO 2 0 -100 200 R 50 50 0 0 P
+P 5 0 1 6 200 100 700 100 700 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model D1213A-02SOL-7
+#/440852/294066/2.49/3/3/TVS Diode (Uni-directional)
+DEF D1213A-02SOL-7 D 0 30 Y Y 1 F N
+F0 "D" 950 300 50 H V L CNN
+F1 "D1213A-02SOL-7" 950 200 50 H V L CNN
+F2 "SOT96P240X120-3N" 950 100 50 H I L CNN
+F3 "https://www.diodes.com/assets/Datasheets/D1213A_02SOL.pdf" 950 0 50 H I L CNN
+F4 "Diodes Inc D1213A-02SOL-7 Dual Uni-Directional TVS Diode Array, 3-Pin SOT-23" 950 -100 50 H I L CNN "Description"
+F5 "1.2" 950 -200 50 H I L CNN "Height"
+F6 "621-D1213A-02SOL-7" 950 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/D1213A-02SOL-7?qs=gfe7vQ8txpUT2qMa05IpnA%3D%3D" 950 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Diodes Inc." 950 -500 50 H I L CNN "Manufacturer_Name"
+F9 "D1213A-02SOL-7" 950 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X CH_1 1 0 0 200 R 50 50 0 0 P
+X CH_2 2 0 -100 200 R 50 50 0 0 P
+X GND 3 1100 0 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 900 100 900 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model INA381A2IDSGR
+#/1190320/294066/2.49/9/3/Integrated Circuit
+DEF INA381A2IDSGR IC 0 30 Y Y 1 F N
+F0 "IC" 1250 300 50 H V L CNN
+F1 "INA381A2IDSGR" 1250 200 50 H V L CNN
+F2 "SON50P200X200X80-9N" 1250 100 50 H I L CNN
+F3 "http://www.ti.com/lit/gpn/ina381" 1250 0 50 H I L CNN
+F4 "26V current sense amplifier with integrated over-current comparator for cost-sensitive applications" 1250 -100 50 H I L CNN "Description"
+F5 "0.8" 1250 -200 50 H I L CNN "Height"
+F6 "595-INA381A2IDSGR" 1250 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/INA381A2IDSGR?qs=rrS6PyfT74d8%252BjnWyluReA%3D%3D" 1250 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Texas Instruments" 1250 -500 50 H I L CNN "Manufacturer_Name"
+F9 "INA381A2IDSGR" 1250 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X IN+ 1 0 0 200 R 50 50 0 0 P
+X VS+ 2 0 -100 200 R 50 50 0 0 P
+X ~ALERT 3 0 -200 200 R 50 50 0 0 P
+X RESET 4 0 -300 200 R 50 50 0 0 P
+X EP 9 700 -800 200 U 50 50 0 0 P
+X IN- 8 1400 0 200 L 50 50 0 0 P
+X VOUT 7 1400 -100 200 L 50 50 0 0 P
+X CMPIN 6 1400 -200 200 L 50 50 0 0 P
+X CMPREF 5 1400 -300 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1200 100 1200 -600 200 -600 200 100 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model MAX6107EUR+T
+#/246936/294066/2.49/3/4/Integrated Circuit
+DEF MAX6107EUR+T IC 0 30 Y Y 1 F N
+F0 "IC" 850 300 50 H V L CNN
+F1 "MAX6107EUR+T" 850 200 50 H V L CNN
+F2 "SOT95P229X119-3N" 850 100 50 H I L CNN
+F3 "https://datasheets.maximintegrated.com/en/ds/MAX6100-MAX6107.pdf" 850 0 50 H I L CNN
+F4 "Voltage References uPower Low-Dropout Voltage Ref" 850 -100 50 H I L CNN "Description"
+F5 "1.194" 850 -200 50 H I L CNN "Height"
+F6 "700-MAX6107EURT" 850 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Maxim-Integrated/MAX6107EUR%2bT?qs=1THa7WoU59HvEEPFSnb3yg%3D%3D" 850 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Maxim Integrated" 850 -500 50 H I L CNN "Manufacturer_Name"
+F9 "MAX6107EUR+T" 850 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X IN 1 0 0 200 R 50 50 0 0 P
+X OUT 2 0 -100 200 R 50 50 0 0 P
+X GND 3 1000 0 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 800 100 800 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model BD33HC5WEFJ-E2
+#/1023607/294066/2.49/9/4/Integrated Circuit
+DEF BD33HC5WEFJ-E2 IC 0 30 Y Y 1 F N
+F0 "IC" 1050 300 50 H V L CNN
+F1 "BD33HC5WEFJ-E2" 1050 200 50 H V L CNN
+F2 "SOIC127P600X100-9N" 1050 100 50 H I L CNN
+F3 "http://rohmfs.rohm.com/en/products/databook/datasheet/ic/power/linear_regulator/bdxxhc5wefj-e.pdf" 1050 0 50 H I L CNN
+F4 "1.5A Variable / Fixed Output LDO Regulators" 1050 -100 50 H I L CNN "Description"
+F5 "1" 1050 -200 50 H I L CNN "Height"
+F6 "ROHM Semiconductor" 1050 -300 50 H I L CNN "Manufacturer_Name"
+F7 "BD33HC5WEFJ-E2" 1050 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "755-BD33HC5WEFJ-E2" 1050 -500 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/ROHM-Semiconductor/BD33HC5WEFJ-E2?qs=QbAZ1slfEbRItL%252B7JDc95w%3D%3D" 1050 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "" 1050 -700 50 H I L CNN "Arrow Part Number"
+F11 "" 1050 -800 50 H I L CNN "Arrow Price/Stock"
+F12 "" 1050 -900 50 H I L CNN "Mouser Testing Part Number"
+F13 "" 1050 -1000 50 H I L CNN "Mouser Testing Price/Stock"
+DRAW
+X VO 1 0 0 200 R 50 50 0 0 P
+X VO_S 2 0 -100 200 R 50 50 0 0 P
+X GND 3 0 -200 200 R 50 50 0 0 P
+X NC_1 4 0 -300 200 R 50 50 0 0 P
+X EP 9 600 -800 200 U 50 50 0 0 P
+X VCC 8 1200 0 200 L 50 50 0 0 P
+X NC_3 7 1200 -100 200 L 50 50 0 0 P
+X NC_2 6 1200 -200 200 L 50 50 0 0 P
+X EN 5 1200 -300 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1000 100 1000 -600 200 -600 200 100 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model TLV62569PDRLT
+#/1059993/294066/2.49/6/3/Integrated Circuit
+DEF TLV62569PDRLT IC 0 30 Y Y 1 F N
+F0 "IC" 950 300 50 H V L CNN
+F1 "TLV62569PDRLT" 950 200 50 H V L CNN
+F2 "SOTFL50P160X60-6N" 950 100 50 H I L CNN
+F3 "http://www.ti.com/lit/gpn/TLV62569" 950 0 50 H I L CNN
+F4 "2.5V-5.5V input, 2-A high efficiency step-down buck converter in SOT23 and SOT563 package" 950 -100 50 H I L CNN "Description"
+F5 "0.6" 950 -200 50 H I L CNN "Height"
+F6 "595-TLV62569PDRLT" 950 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TLV62569PDRLT?qs=1mbolxNpo8ckRIg2eyRRjA%3D%3D" 950 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Texas Instruments" 950 -500 50 H I L CNN "Manufacturer_Name"
+F9 "TLV62569PDRLT" 950 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X FB 1 0 0 200 R 50 50 0 0 P
+X GND 2 0 -100 200 R 50 50 0 0 P
+X VIN 3 0 -200 200 R 50 50 0 0 P
+X SW 4 1100 0 200 L 50 50 0 0 P
+X EN 5 1100 -100 200 L 50 50 0 0 P
+X NC/PG 6 1100 -200 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 900 100 900 -300 200 -300 200 100 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model SC189ZSKTRT
+#/622428/294066/2.49/5/0/Integrated Circuit
+DEF SC189ZSKTRT IC 0 30 Y Y 1 F N
+F0 "IC" 950 300 50 H V L CNN
+F1 "SC189ZSKTRT" 950 200 50 H V L CNN
+F2 "SOT95P280X145-5N" 950 100 50 H I L CNN
+F3 "https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-DGA14/1272982.pdf" 950 0 50 H I L CNN
+F4 "Switching Voltage Regulators 2.5MHz-1.5A SYNC STEP DOWN REG" 950 -100 50 H I L CNN "Description"
+F5 "1.45" 950 -200 50 H I L CNN "Height"
+F6 "947-SC189ZSKTRT" 950 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Semtech/SC189ZSKTRT?qs=rBWM4%252BvDhIck0D%2FgoUNMIQ%3D%3D" 950 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "SEMTECH" 950 -500 50 H I L CNN "Manufacturer_Name"
+F9 "SC189ZSKTRT" 950 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X VIN 1 0 0 200 R 50 50 0 0 P
+X GND 2 0 -100 200 R 50 50 0 0 P
+X EN 3 0 -200 200 R 50 50 0 0 P
+X VOUT 4 1100 0 200 L 50 50 0 0 P
+X LX 5 1100 -100 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 900 100 900 -300 200 -300 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

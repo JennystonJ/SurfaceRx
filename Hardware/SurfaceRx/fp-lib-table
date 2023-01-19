@@ -1,3 +1,4 @@
 (fp_lib_table
-  (lib (name "SamacSys_Parts")(type "KiCad")(uri "C:/Users/Jenny/OneDrive/Documents/KiCad Libraries/Library Loader/SamacSys_Parts.pretty")(options "")(descr ""))
+  (lib (name "SamacSys_Parts")(type "KiCad")(uri "${KIPRJMOD}/Library Loader/SamacSys_Parts.pretty")(options "")(descr ""))
+  (lib (name "Custom_SurfaceRx")(type "KiCad")(uri "${KIPRJMOD}/libraries/footprints/Custom_SurfaceRx/Custom_SurfaceRx.pretty")(options "")(descr ""))
 )

@@ -1,0 +1,75 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP NE555DR
+D Single Precision Timer
+K
+F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP SP3003-02XTG
+D ESD Suppressors / TVS Diodes 2 channels .65pF
+K
+F https://componentsearchengine.com/Datasheets/2/SP3003-02XTG.pdf
+$ENDCMP
+#
+$CMP TCKE805NA,RF
+D 18 V, 5A eFuse IC with Adjustable Overcurrent Protection and Reverse Current Blocking FET Control
+K
+F http://toshiba.semicon-storage.com/info/docget.jsp?did=67979&prodName=TCKE805NA
+$ENDCMP
+#
+$CMP CUHS20S30,H3F
+D Schottky Diodes & Rectifiers Sml-Signal Schottky 2A 30V 390pF
+K
+F https://toshiba.semicon-storage.com/info/docget.jsp?did=63606&prodName=CUHS20S30
+$ENDCMP
+#
+$CMP NCP115ASN330T2G
+D 300 MA CMOS LOW DROPOUT R
+K
+F http://www.onsemi.com/pub/Collateral/NCP115-D.PDF
+$ENDCMP
+#
+$CMP PTS636_SM25J_SMTR_LFS
+D Tactile Switches Tact 50mA 12VDC, 6.0x3.5, 2.5mm H, 180gf, J leads, No ground pin, White Actuator
+K
+F https://www.mouser.co.uk/datasheet/2/60/pts636-1550567.pdf
+$ENDCMP
+#
+$CMP D1213A-02SOL-7
+D Diodes Inc D1213A-02SOL-7 Dual Uni-Directional TVS Diode Array, 3-Pin SOT-23
+K
+F https://www.diodes.com/assets/Datasheets/D1213A_02SOL.pdf
+$ENDCMP
+#
+$CMP INA381A2IDSGR
+D 26V current sense amplifier with integrated over-current comparator for cost-sensitive applications
+K
+F http://www.ti.com/lit/gpn/ina381
+$ENDCMP
+#
+$CMP MAX6107EUR+T
+D Voltage References uPower Low-Dropout Voltage Ref
+K
+F https://datasheets.maximintegrated.com/en/ds/MAX6100-MAX6107.pdf
+$ENDCMP
+#
+$CMP BD33HC5WEFJ-E2
+D 1.5A Variable / Fixed Output LDO Regulators
+K
+F http://rohmfs.rohm.com/en/products/databook/datasheet/ic/power/linear_regulator/bdxxhc5wefj-e.pdf
+$ENDCMP
+#
+$CMP TLV62569PDRLT
+D 2.5V-5.5V input, 2-A high efficiency step-down buck converter in SOT23 and SOT563 package
+K
+F http://www.ti.com/lit/gpn/TLV62569
+$ENDCMP
+#
+$CMP SC189ZSKTRT
+D Switching Voltage Regulators 2.5MHz-1.5A SYNC STEP DOWN REG
+K
+F https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-DGA14/1272982.pdf
+$ENDCMP
+#
+#End Doc Library
