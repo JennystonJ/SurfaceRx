@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name "SamacSys_Parts")(type "Legacy")(uri "${KIPRJMOD}/Library Loader/SamacSys_Parts.lib")(options "")(descr ""))
+  (lib (name "Custom_SurfaceRx")(type "KiCad")(uri "${KIPRJMOD}/libraries/symbols/Custom_SurfaceRx.kicad_sym")(options "")(descr ""))
 )
