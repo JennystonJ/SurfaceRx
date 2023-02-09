@@ -3052,7 +3052,7 @@
   (symbol (lib_id "SamacSys_Parts:SC189ZSKTRT") (at 40.64 36.83 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid addc6cf4-b4f5-4c59-b37c-65bd4167e7d9)
-    (property "Reference" "IC1" (id 0) (at 54.61 29.21 0))
+    (property "Reference" "U3" (id 0) (at 54.61 29.21 0))
     (property "Value" "SC189ZSKTRT" (id 1) (at 54.61 31.75 0))
     (property "Footprint" "SamacSys_Parts:SOT95P280X145-5N" (id 2) (at 64.77 34.29 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
@@ -3513,9 +3513,6 @@
     (path "/acf32018-53c2-4e8b-b8cf-24567591f811"
       (reference "D1") (unit 1) (value "LED") (footprint "LED_SMD:LED_0603_1608Metric")
     )
-    (path "/addc6cf4-b4f5-4c59-b37c-65bd4167e7d9"
-      (reference "IC1") (unit 1) (value "SC189ZSKTRT") (footprint "SamacSys_Parts:SOT95P280X145-5N")
-    )
     (path "/6d28bcac-71e6-4094-bc46-8032e6c34cab"
       (reference "J1") (unit 1) (value "Conn_01x03") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
     )
@@ -3572,6 +3569,9 @@
     )
     (path "/c51edd18-4d71-46c5-8db5-b8b45c7d3117"
       (reference "U2") (unit 1) (value "CAT24C512") (footprint "Package_SO:TSSOP-8_4.4x3mm_P0.65mm")
+    )
+    (path "/addc6cf4-b4f5-4c59-b37c-65bd4167e7d9"
+      (reference "U3") (unit 1) (value "SC189ZSKTRT") (footprint "SamacSys_Parts:SOT95P280X145-5N")
     )
   )
 )
